@@ -66,11 +66,6 @@ export const kateWashington: Conversation = {
   tags: ["Live Interview", "Author Spotlight"],
 };
 
-/**
- * Homepage featured conversation — always exactly ONE.
- * Point this at whichever archive entry is currently featured.
- */
-export const featuredConversation: Conversation = kateWashington;
 
 /**
  * Conversation archive (/conversations) — newest first.
@@ -129,3 +124,9 @@ export const conversations: Conversation[] = [
   andrewChild,
   abigailDillen,
 ];
+
+/**
+ * Homepage featured conversation — always exactly ONE.
+ * Point this at whichever archive entry is currently featured.
+ */
+export const featuredConversation: Conversation = andrewChild;

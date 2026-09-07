@@ -10,9 +10,8 @@ export const hero = {
     "The Book Crew Readers Community brings powerful stories to life through live interviews, visual storytelling, and meaningful connection.",
   primaryCta: { label: "Join Our Community", href: "/contact" },
   secondaryCta: { label: "View Us Live", href: "https://youtube.com/@thebookcrew" },
-  image:
-    "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1200&q=80",
-  imageAlt: "Studio microphone beside stacked books in warm light",
+  image: "",
+  imageAlt: "",
 } as const;
 
 export const stats = [
