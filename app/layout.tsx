@@ -21,10 +21,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.tagline}`,
-    template: `%s | ${site.name}`,
+    default: "The Book Crew Community",
+    template: `%s | The Book Crew Community`,
   },
-  description: site.description,
+  description:
+    "A community for readers and authors who believe every story deserves to be heard.",
   keywords: [
     "literary media",
     "author interviews",
@@ -35,18 +36,32 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: site.name }],
   creator: site.name,
+  alternates: {
+    canonical: site.url,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: site.url,
-    title: `${site.name} — ${site.tagline}`,
-    description: site.description,
+    title: "The Book Crew Community",
+    description:
+      "A community for readers and authors who believe every story deserves to be heard.",
     siteName: site.name,
+    images: [
+      {
+        url: "/wide_clean_professional_graphic_banner_social.png",
+        width: 1733,
+        height: 907,
+        alt: "The Book Crew Community — Real Readers, Great Books, Stronger Together",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
-    description: site.description,
+    title: "The Book Crew Community",
+    description:
+      "A community for readers and authors who believe every story deserves to be heard.",
+    images: ["/wide_clean_professional_graphic_banner_social.png"],
   },
   robots: { index: true, follow: true },
 };
