@@ -5,9 +5,9 @@
 @layer base {
   :root {
     --background: 250 247 242; /* Warm Ivory */
-    --foreground: 34 34 34; /* Rich Charcoal */
-    --forest: 35 70 63;
-    --bronze: 184 120 46;
+    --foreground: 4 22 60; /* Brand Navy */
+    --forest: 4 22 60;
+    --bronze: 233 101 3;
   }
 
   * {
@@ -21,7 +21,7 @@
   }
 
   body {
-    @apply bg-ivory text-charcoal font-sans selection:bg-forest/15 selection:text-forest;
+    @apply bg-ivory text-charcoal font-sans selection:bg-bronze/20 selection:text-bronze-700;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -52,9 +52,9 @@
     @apply text-[12px] font-medium uppercase tracking-[0.22em] text-bronze;
   }
 
-  /* Reference buttons */
+  /* Reference buttons — primary CTAs use the brand orange */
   .btn-forest {
-    @apply inline-flex items-center justify-center gap-2 rounded-md bg-forest px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-forest-600 hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest;
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-bronze px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-bronze-600 hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronze;
   }
 
   .btn-bronze {
@@ -62,7 +62,7 @@
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-md border border-charcoal/20 bg-transparent px-6 py-3 text-sm font-medium text-charcoal transition-all duration-300 hover:border-forest hover:text-forest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest;
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-charcoal/20 bg-transparent px-6 py-3 text-sm font-medium text-charcoal transition-all duration-300 hover:border-bronze hover:text-bronze focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronze;
   }
 
   .btn-outline-light {
@@ -96,16 +96,16 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-white via-copper-200 to-copper bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-white via-bronze-200 to-bronze bg-clip-text text-transparent;
     background-size: 200% auto;
   }
 
   .divider-copper {
-    @apply h-px bg-gradient-to-r from-transparent via-copper/40 to-transparent;
+    @apply h-px bg-gradient-to-r from-transparent via-bronze/40 to-transparent;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-copper px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-copper-400 hover:shadow-glow-copper hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bronze px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-bronze-400 hover:shadow-glow-copper hover:-translate-y-0.5;
   }
 
   .btn-ghost {
@@ -192,7 +192,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #23463f;
+  background: #04163c;
   border: 3px solid #ffffff;
   box-shadow: 0 1px 4px rgba(34, 34, 34, 0.3);
   transition: transform 0.15s ease;
@@ -202,7 +202,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #23463f;
+  background: #04163c;
   border: 3px solid #ffffff;
   box-shadow: 0 1px 4px rgba(34, 34, 34, 0.3);
   transition: transform 0.15s ease;
@@ -217,5 +217,5 @@
 }
 
 .audio-range:focus-visible {
-  box-shadow: 0 0 0 3px rgba(35, 70, 63, 0.25);
+  box-shadow: 0 0 0 3px rgba(4, 22, 60, 0.25);
 }

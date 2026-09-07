@@ -62,8 +62,8 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   className={cn(
-                    "text-[13px] font-medium transition-colors hover:text-forest",
-                    active ? "text-forest" : "text-charcoal/75",
+                    "text-[13px] font-medium transition-colors hover:text-bronze",
+                    active ? "text-bronze" : "text-charcoal/75",
                   )}
                 >
                   {item.label}
@@ -119,7 +119,7 @@ export function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="block border-b border-mist py-4 font-display text-xl text-charcoal transition-colors hover:text-forest"
+                    className="block border-b border-mist py-4 font-display text-xl text-charcoal transition-colors hover:text-bronze"
                   >
                     {item.label}
                   </Link>
