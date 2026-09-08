@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Facebook } from "lucide-react";
+import { Facebook, Mail } from "lucide-react";
 import { ContactSection } from "@/components/contact/ContactForm";
 import { ContactHeader, ContactCards } from "@/components/contact/ContactSections";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -11,7 +10,18 @@ export const metadata: Metadata = {
 };
 
 const socialLinks = [
-  { icon: Facebook, label: "Facebook", href: site.socials.facebook },
+  {
+    icon: Facebook,
+    label: "Facebook",
+    handle: "@thebookcrew",
+    href: "https://www.facebook.com/share/14rCbSagtT9/",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    handle: "hello@thebookcrew.online",
+    href: "mailto:hello@thebookcrew.online",
+  },
 ];
 
 export default function ContactPage() {
@@ -29,24 +39,29 @@ export default function ContactPage() {
             title="Elsewhere online"
             subtitle="Follow the conversation on the platforms where readers actually live."
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-1">
-            {socialLinks.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="card-light group flex items-center gap-4 p-5 hover:shadow-card-hover"
-              >
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-bronze/30 bg-bronze/5 text-bronze transition group-hover:bg-bronze/10">
-                  <s.icon className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold">{s.label}</p>
-                  <p className="text-xs text-charcoal/60">@thebookcrew</p>
-                </div>
-              </a>
-            ))}
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {socialLinks.map((s) => {
+              const isExternal = s.href.startsWith("http");
+              return (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  {...(isExternal
+                    ? { target: "_blank", rel: "noreferrer noopener" }
+                    : {})}
+                  aria-label={s.label}
+                  className="card-light group flex items-center gap-4 p-5 hover:shadow-card-hover"
+                >
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-bronze/30 bg-bronze/5 text-bronze transition group-hover:bg-bronze/10">
+                    <s.icon className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold">{s.label}</p>
+                    <p className="text-xs text-charcoal/60">{s.handle}</p>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>

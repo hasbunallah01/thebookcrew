@@ -12,14 +12,14 @@ export const contactCards = [
   {
     icon: "mail",
     title: "Email",
-    body: "the.book.crew.community@gmail.com",
-    href: "mailto:the.book.crew.community@gmail.com",
+    body: "hello@thebookcrew.online",
+    href: "mailto:hello@thebookcrew.online",
   },
   {
     icon: "megaphone",
     title: "Press & partnerships",
-    body: "the.book.crew.community@gmail.com",
-    href: "mailto:the.book.crew.community@gmail.com",
+    body: "press@thebookcrew.online",
+    href: "mailto:press@thebookcrew.online",
   },
 ] as const;
 
