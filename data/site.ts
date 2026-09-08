@@ -5,7 +5,7 @@ export const site = {
   description:
     "The Book Crew Readers Community brings powerful stories to life through live interviews, visual storytelling, and meaningful connection between authors and readers.",
   url: "https://thebookcrew.online",
-  email: "the.book.crew.community@gmail.com",
+  email: "contact@thebookcrew.online",
   phone: "",
   address: "",
   hours: "Mon – Fri · 9:00 – 18:00 (UTC)",
