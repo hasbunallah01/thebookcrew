@@ -12,6 +12,7 @@ import {
   SpotlightGallery,
   AboutCTA,
 } from "@/components/about/AboutSections";
+import { AboutSocial } from "@/components/about/AboutSocial";
 import { FAQPreview } from "@/components/home/FAQPreview";
 import {
   ourStory,
@@ -73,6 +74,9 @@ export default function AboutPage() {
 
       {/* 15. Why Authors Choose The Book Crew */}
       <ValueGrid {...whyChooseUs} columns={3} background="ivory" />
+
+      {/* 16. Social / contact */}
+      <AboutSocial />
 
       {/* 17. Closing CTA */}
       <AboutCTA />
