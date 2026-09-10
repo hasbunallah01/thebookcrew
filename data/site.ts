@@ -10,7 +10,7 @@ export const site = {
   address: "",
   hours: "Mon – Fri · 9:00 – 18:00 (UTC)",
   socials: {
-    facebook: "https://www.facebook.com/share/1GYLp3c4Zs/",
+    facebook: "https://www.facebook.com/share/1GsyPS2jso/",
     youtube: "https://youtube.com/@thebookcrew",
   },
   nav: [
